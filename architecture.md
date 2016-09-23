@@ -1,10 +1,10 @@
-# Community Platform (Zen) Architecture
+# Arquitectura de la Plataforma Comunitaria (Zen)
 
-Zen is primarily composed of a handful of microservices:
++Zen se compone principalmente de un puñado de microservicios:
 
 ![](services-2.png)
 
-These services live in the following code repositories:
++Estos servicios residen en los siguientes repositorios de código:
 
 * [cp-zen-platform](https://github.com/CoderDojo/cp-zen-platform)
 * [cp-events-service](https://github.com/CoderDojo/cp-events-service)
@@ -15,42 +15,42 @@ These services live in the following code repositories:
 
 ## cp-zen-platform
 
-cp-zen-platform contains all the front end [AngularJS](https://angularjs.org/) code, as well as implementing the backend REST API server. The server is written using the [Hapi](http://hapijs.com/) framework. The REST API calls are mostly proxy calls through to [Seneca](http://senecajs.org/) microservices.
+cp-zen-platform contiene todo el código de interface [AngularJS](https://angularjs.org/), así como también implementa los REST API del lado del servidor. El servidor está escrito utilizando el entorno [Hapi](http://hapijs.com/). Las llamadas al REST API son en su mayoría llamadas al proxy a través de microservicios [Seneca](http://senecajs.org/).
 
 ## cp-events-service
 
-The Events service implememts all the Events related functionality in Zen. The event data is stored in [PostgresSQL](http://www.postgresql.org/).
+El servicio de eventos implementa todos los eventos relacionados con la funcionalidad en el Zen. Los datos de eventos se almacena en [PostgresSQL](http://www.postgresql.org/).
 
 ## cp-badges-service
 
-The Badges service implements all the Badges related functionality in Zen. This service talks to a [BadgeKit](http://badgekit.openbadges.org) via the BadgeKit API, all Badge related data is stored in BadgeKit.
+El servicio Badges implementa todas las funcionalidades relacionadas con Badges de Zend. Este servicio le habla a un [BadgeKit](http://badgekit.openbadges.org) a través de los BadgeKit API, todos los datos relativos al Badge están almacenados en BadgeKit.
 
 ## cp-salesforce-service
 
-The Salesforce service implements all the Salesforce related functionality in Zen. This service talks directly to [Salesforce](https://developer.salesforce.com/). Salesforce is used internally by the CoderDojo Foundation staff.
+El servicio de Salesforce implementa toda la funcionalidad relacionada con Salesforce en el Zen. Este servicio conversa directamente con [Salesforce](https://developer.salesforce.com/). Salesforce es utilizado internamente por el personal del CoderDojo Foundation.
 
 ## cp-dojos-service
 
-The Dojos service implememts all the Dojos related functionality in Zen. All dojo related data is stored in [PostgresSQL](http://www.postgresql.org/).
+El servicio Dojos implementa toda la funcionalidad relacionada con Dojos en el Zen. Todos los datos relacionados con dojo están almacenados en [PostgresSQL](http://www.postgresql.org/).
 
 ## cp-users-service
 
-The Users service implememts all the User related functionality in Zen. All user data is stored in [PostgresSQL](http://www.postgresql.org/).
+El servicio Users implementa todas las funcionalidades relacionadas a usuarios en Zen. Todos los datos de usuarios son almacenados en [PostgresSQL](http://www.postgresql.org/).
 
-## External Services
+## Servicios Externos
 
-The full list of external services that Zen integrates with is as follows:
+La lista completa de servicios externos con los que integra Zen son los siguientes:
 
-* [NodeBB](https://nodebb.org/) - Mentor & Youth Forums
-* [Google Apps Gmail, reCAPTCHA](https://developers.google.com/) - auto-creating emails
+* [NodeBB](https://nodebb.org/) - Foros Mentores y Jovenes
+* [Google Apps Gmail, reCAPTCHA](https://developers.google.com/) - correos auto-creados
 * [Google Maps](https://maps.google.com) - Google Maps
 * [Salesforce](https://www.salesforce.com/) - Salesforce
 * [Intercom](https://www.intercom.io/) - Intercom
 * [New Relic](http://newrelic.com/) - New Relic
-* [CrowdIn](https://crowdin.com/project/zen-community-platform) - Localization Management Platform
+* [CrowdIn](https://crowdin.com/project/zen-community-platform) - Plataforma de Administración de Localización
 * [Mozilla BadgeKit](http://badgekit.openbadges.org/) - Open Badges
-* [MailTrap](https://mailtrap.io/) - Email testing
+* [MailTrap](https://mailtrap.io/) - Prueba de email
 
-## Hosting
+## Alojamiento
 
-Zen is deployed on [AWS](http://aws.amazon.com/) and also uses a plethora of AWS services, none of which are directly used from the code above. How Zen is built & deployed is beyond the scope of this document.
+Zen es desplegado en [AWS](http://aws.amazon.com/) y también utiliza una gran cantidad de servicios de AWS, ninguno de los cuales es utilizado directamente desde el código de arriba. Cómo está construído y desplegado Zen está más allá de los alcances de este documento.
